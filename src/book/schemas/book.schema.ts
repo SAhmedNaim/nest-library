@@ -1,10 +1,13 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Date, Document } from 'mongoose';
+import {Date, Document, SchemaTypes} from 'mongoose';
 
 export type BookDocument = Book & Document;
 
 @Schema()
 export class Book {
+    @Prop({ type: SchemaTypes.ObjectId, ref: 'Category' })
+    categoryId: string;
+
     @Prop()
     name: string;
 

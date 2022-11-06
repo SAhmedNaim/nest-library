@@ -14,6 +14,13 @@ export class BookController {
         return allBooks;
     }
 
+    @Get('/category/:categoryId')
+    async getBooksByCategory(@Param() searchBookDTO: SearchBookDTO) {
+        const { categoryId } = searchBookDTO;
+        const books = await this.bookService.getBooksByCategory(categoryId);
+        return books;
+    }
+
     @Get('/:id')
     async getBook(@Param('id') id: string) {
         const book = await this.bookService.getBook(id);
