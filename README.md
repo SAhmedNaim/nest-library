@@ -71,3 +71,32 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+## APIs
+
+- Implement the sign up api. -> localhost:3000/api/auth/register
+
+```bash
+{
+    "username": "S Ahmed Naim",
+    "email": "naim@gmail.com",
+    "password": "12345678",
+    "roles": ["librarian"]
+}
+```
+
+- Implement the log in api. -> localhost:3000/auth/login
+
+```bash
+{
+    "username": "Admin",
+    "password": "12345678"
+}
+```
+
+- Implement the the newest ten books api. -> http://localhost:3000/api/books?latest=10
+
+- Implement the most ten popular books of special category. -> http://localhost:3000/api/books/category/<category_id>
+
+- Implement the latest ten returned books -> http://localhost:3000/api/borrows?type=return&&limit=10
